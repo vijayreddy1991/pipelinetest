@@ -1,0 +1,42 @@
+resources:
+  - name: sample_scriptrepo
+    type: gitRepo
+    repoPath: bindushree16/sample_pip
+    configuration:
+      integrationName: github
+      branches:
+        only: master
+      tags:
+        except: none
+        only: none   
+      buildOnCommit: true
+      buildOnPullRequest: true
+      buildOnPullRequestClose: true
+      buildOnRelease: true
+      buildOnTagPush: true
+      buildOnFileCommit: "*test"
+      shallowDepth: 2
+      gitConfig: 
+        - dont_know
+        - dont_know_2
+    initialVersion:
+      sha: master
+  
+pipelines:
+  - name: pipeline_1
+    steps:    
+      - name: build-test
+        type: bash
+        setup:
+          runtime:
+            type: image
+            image:
+             custom:
+               name: drydock/u16all
+               tag: master
+        triggeredBy:
+          resources:
+            - sample_scriptrepo
+        execution:
+          onExecute:
+            - echo "hi"
