@@ -1,7 +1,7 @@
 resources:
   - name: sample_scriptrepo
     type: gitRepo
-    repoPath: bindushree16/sample_pip
+    repoPath: vijayreddy1991/sample_pip
     configuration:
       integrationName: github
       branches:
