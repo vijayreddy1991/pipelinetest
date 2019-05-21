@@ -14,8 +14,8 @@ pipelines:
     setup:
       environmentVariables:
         readOnly:
-          ENV1: value1
-          ENV2: value2
+          NameF: vijay
+          NameL: kumar
     steps:    
       - name: test1
         type: bash
@@ -37,6 +37,7 @@ pipelines:
           onExecute:
             - echo "hi"
             - printenv
+            - echo "NameF=$NameF"
 
       - name: test2
         type: bash
@@ -58,6 +59,7 @@ pipelines:
           onExecute:
             - echo "test2"
             - printenv
+            - echo "NameF=$NameF"
 
       - name: test3
         type: bash
@@ -79,6 +81,7 @@ pipelines:
           onExecute:
             - echo "Test3"
             - printenv
+            - echo "NameF=$NameF"
 
       - name: test4
         type: bash
@@ -100,3 +103,4 @@ pipelines:
           onExecute:
             - echo "test4"
             - printenv
+            - echo "NameF=$NameF"
