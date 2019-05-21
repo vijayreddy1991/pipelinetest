@@ -1,5 +1,5 @@
 resources:
-  - name: testing
+  - name: testing_1
     type: gitRepo
     repoPath: vijayreddy1991/sample_pip
     configuration:
@@ -32,7 +32,7 @@ pipelines:
                tag: master
         triggeredBy:
           resources:
-            - testing
+            - testing_1
         execution:
           onExecute:
             - echo "hi"
