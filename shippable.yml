@@ -23,7 +23,7 @@ resources:
       sha: master
   
 pipelines:
-  - name: pipeline1
+  - name: pipeline1@2
     steps:    
       - name: test1
         type: bash
