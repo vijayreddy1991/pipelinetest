@@ -14,16 +14,16 @@ pipelines:
     setup:
       environmentVariables:
         readOnly:
-          OLD: vijay
-          NEW: kumar
+          Number: 23
+          Sequence: 1
     steps:    
       - name: test1
         type: bash
         setup:
           environmentVariables:
             normal:
-              OLD: ranjan
-              NEW: reddy        
+              Number: 27
+              Sequence: 1       
           runtime:
             type: image
             image:
@@ -43,8 +43,8 @@ pipelines:
         setup:
           environmentVariables:
             normal:
-              FirstV: ranjan
-              LastV: reddy         
+              Number: 24
+              Sequence: 1         
           runtime:
             type: image
             image:
@@ -64,8 +64,8 @@ pipelines:
         setup:
           environmentVariables:
             normal:
-              FirstV: ranjan
-              LastV: reddy       
+              Number: 22
+              Sequence: 1        
           runtime:
             type: image
             image:
@@ -85,8 +85,8 @@ pipelines:
         setup:
           environmentVariables:
             normal:
-              FirstV: ranjan
-              LastV: reddy         
+              Number: 29
+              Sequence: 1          
           runtime:
             type: image
             image:
