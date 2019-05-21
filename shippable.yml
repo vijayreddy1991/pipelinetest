@@ -23,9 +23,9 @@ resources:
       sha: master
   
 pipelines:
-  - name: pipeline_1
+  - name: pipeline1
     steps:    
-      - name: build-test
+      - name: test1
         type: bash
         setup:
           runtime:
@@ -41,53 +41,53 @@ pipelines:
           onExecute:
             - echo "hi"
 
-#       - name: test2
-#         type: bash
-#         setup:
-#           runtime:
-#             type: image
-#             image:
-#              custom:
-#                name: drydock/u16all
-#                tag: master
-#         triggeredBy:
-#           steps:
-#             - build-test
-#         execution:
-#           onExecute:
-#             - echo "test2"
+      - name: test2
+        type: bash
+        setup:
+          runtime:
+            type: image
+            image:
+             custom:
+               name: drydock/u16all
+               tag: master
+        triggeredBy:
+          steps:
+            - test1
+        execution:
+          onExecute:
+            - echo "test2"
 
-#       - name: push-test3
-#         type: bash
-#         setup:
-#           runtime:
-#             type: image
-#             image:
-#              custom:
-#                name: drydock/u16all
-#                tag: master
-#         requires:
-#           integrations:
-#             - artifactorytest
-#         triggeredBy:
-#           steps:
-#             - test2
-#         execution:
-#           onExecute:
-#             - echo "push-Test3"
+      - name: test3
+        type: bash
+        setup:
+          runtime:
+            type: image
+            image:
+             custom:
+               name: drydock/u16all
+               tag: master
+        requires:
+          integrations:
+            - artifactorytest
+        triggeredBy:
+          steps:
+            - test2
+        execution:
+          onExecute:
+            - echo "Test3"
 
-#       - name: job2
-#         type: bash
-#         setup:
-#           runtime:
-#             type: image
-#             image:
-#              custom:
-#                name: drydock/u16all
-#                tag: master
-#         triggeredBy:
-#           steps:
-#             - build-test
-#         execution:
-#           onExecute:
-#             - echo "job2"
+      - name: test4
+        type: bash
+        setup:
+          runtime:
+            type: image
+            image:
+             custom:
+               name: drydock/u16all
+               tag: master
+        triggeredBy:
+          steps:
+            - test3
+        execution:
+          onExecute:
+            - echo "test4"
