@@ -1,33 +1,29 @@
 resources:
-  - name: sample_scriptrepo
+  - name: testing
     type: gitRepo
     repoPath: vijayreddy1991/sample_pip
     configuration:
       integrationName: github
       branches:
         only: master
-      tags:
-        except: none
-        only: none   
-      buildOnCommit: true
-      buildOnPullRequest: true
-      buildOnPullRequestClose: true
-      buildOnRelease: true
-      buildOnTagPush: true
-      buildOnFileCommit: "*test"
-      shallowDepth: 2
-      gitConfig: 
-        - dont_know
-        - dont_know_2
     initialVersion:
       sha: master
   
 pipelines:
   - name: pipeline_1
+    setup:
+      environmentVariables:
+        readOnly:
+          ENV1: vijay
+          ENV2: kumar
     steps:    
       - name: test1
         type: bash
         setup:
+          environmentVariables:
+            normal:
+              ENV1: ranjan
+              ENV2: reddy        
           runtime:
             type: image
             image:
@@ -36,14 +32,19 @@ pipelines:
                tag: master
         triggeredBy:
           resources:
-            - sample_scriptrepo
+            - testing
         execution:
           onExecute:
             - echo "hi"
+            - printenv
 
       - name: test2
         type: bash
         setup:
+          environmentVariables:
+            normal:
+              ENV1: ranjan
+              ENV2: reddy         
           runtime:
             type: image
             image:
@@ -56,10 +57,15 @@ pipelines:
         execution:
           onExecute:
             - echo "test2"
+            - printenv
 
       - name: test3
         type: bash
         setup:
+          environmentVariables:
+            normal:
+              ENV1: ranjan
+              ENV2: reddy         
           runtime:
             type: image
             image:
@@ -72,10 +78,15 @@ pipelines:
         execution:
           onExecute:
             - echo "Test3"
+            - printenv
 
       - name: test4
         type: bash
         setup:
+          environmentVariables:
+            normal:
+              ENV1: ranjan
+              ENV2: reddy         
           runtime:
             type: image
             image:
@@ -88,3 +99,4 @@ pipelines:
         execution:
           onExecute:
             - echo "test4"
+            - printenv
