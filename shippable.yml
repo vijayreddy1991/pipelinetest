@@ -14,16 +14,16 @@ pipelines:
     setup:
       environmentVariables:
         readOnly:
-          FIRSTNAME: vijay
-          LASTNAME: kumar
+          OLD: vijay
+          NEW: kumar
     steps:    
       - name: test1
         type: bash
         setup:
           environmentVariables:
             normal:
-              FIRSTNAME: ranjan
-              LASTNAME: reddy        
+              OLD: ranjan
+              NEW: reddy        
           runtime:
             type: image
             image:
