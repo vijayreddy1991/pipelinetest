@@ -14,8 +14,8 @@ pipelines:
     setup:
       environmentVariables:
         readOnly:
-          Number: 23
-          Sequence: 1
+          ENV1: value1
+          ENV2: value2
     steps:    
       - name: test1
         type: bash
