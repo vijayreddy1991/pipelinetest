@@ -14,16 +14,16 @@ pipelines:
     setup:
       environmentVariables:
         readOnly:
-          Firstname: vijay
-          Lastname: kumar
+          First: vijay
+          Last: kumar
     steps:    
       - name: test1
         type: bash
         setup:
           environmentVariables:
             normal:
-              Firstname: ranjan
-              Lastname: reddy        
+              First: ranjan
+              Last: reddy        
           runtime:
             type: image
             image:
@@ -43,8 +43,8 @@ pipelines:
         setup:
           environmentVariables:
             normal:
-              Firstname: ranjan
-              Lastname: reddy         
+              First: ranjan
+              Last: reddy         
           runtime:
             type: image
             image:
@@ -64,8 +64,8 @@ pipelines:
         setup:
           environmentVariables:
             normal:
-              Firstname: ranjan
-              Lastname: reddy       
+              First: ranjan
+              Last: reddy       
           runtime:
             type: image
             image:
@@ -85,8 +85,8 @@ pipelines:
         setup:
           environmentVariables:
             normal:
-              Firstname: ranjan
-              Lastname: reddy         
+              First: ranjan
+              Last: reddy         
           runtime:
             type: image
             image:
