@@ -1,7 +1,7 @@
 resources:
   - name: testing_1
     type: gitRepo
-    repoPath: vijayreddy1991/sample_pip
+    repoPath: vijayreddy1991/pipelinetest
     configuration:
       integrationName: github
       branches:
