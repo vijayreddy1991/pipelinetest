@@ -22,8 +22,8 @@ pipelines:
         setup:
           environmentVariables:
             normal:
-              Number: 27
-              Sequence: 1       
+              NameF: reddy
+              NameL: kumar       
           runtime:
             type: image
             image:
