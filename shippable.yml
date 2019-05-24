@@ -54,7 +54,7 @@ pipelines:
                tag: master
         triggeredBy:
           steps:
-            - test4
+            - test1
         execution:
           onExecute:
             - echo "test2"
@@ -98,7 +98,7 @@ pipelines:
                tag: master
         triggeredBy:
           steps:
-            - test2
+            - test3
         execution:
           onExecute:
             - echo "test4"
