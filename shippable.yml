@@ -10,12 +10,12 @@ resources:
       sha: master
   
 pipelines:
-  - name: runtime
-#     setup:
-#       environmentVariables:
-#         readOnly:
-#           NameF: vijay
-#           NameL: kumar
+  - name: pipeline_pipe
+    setup:
+      environmentVariables:
+        readOnly:
+          NameF: vijay
+          NameL: kumar
     steps:    
       - name: test1
         type: bash
