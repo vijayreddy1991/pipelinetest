@@ -23,7 +23,7 @@ pipelines:
           environmentVariables:
             normal:
               Name: reddy
-              Name: umar       
+#               Name: umar       
           runtime:
             type: image
             image:
