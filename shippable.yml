@@ -13,7 +13,7 @@ pipelines:
   - name: pipeline_pipe
     setup:
       environmentVariables:
-        normal:
+        readOnly:
           NameF: vijay
           NameL: kumar
     steps:    
@@ -21,7 +21,7 @@ pipelines:
         type: bash
         setup:
           environmentVariables:
-            normal:
+            readOnly:
               NameF: reddy
               NameL: umar       
           runtime:
@@ -35,7 +35,7 @@ pipelines:
             - testing_1
         execution:
           onExecute:
-            - echo "hi"
+            - echo "test1"
             - echo "NameL=$NameL"
             - echo "NameF=$NameF"
 
@@ -43,7 +43,7 @@ pipelines:
         type: bash
         setup:
           environmentVariables:
-            normal:
+            readOnly:
               NameF: ranjan
               NameL: bindu        
           runtime:
@@ -65,7 +65,7 @@ pipelines:
         type: bash
         setup:
           environmentVariables:
-            normal:
+            readOnly:
               NameF: barath
               NameL: jatin     
           runtime:
@@ -87,7 +87,7 @@ pipelines:
         type: bash
         setup:
           environmentVariables:
-            normal:
+            readOnly:
               NameF: Chaitu
               NameL: vishnu        
           runtime:
