@@ -36,7 +36,7 @@ pipelines:
         execution:
           onExecute:
             - echo "test1"
-            - NameL: Pk
+            - echo "NameL=$NameL"
             - echo "NameF=$NameF"
 
       - name: test2
