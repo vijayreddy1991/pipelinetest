@@ -13,7 +13,7 @@ pipelines:
   - name: pipeline_pipe
     setup:
       environmentVariables:
-        readOnly:
+        normal:
           NameF: vijay
           NameL: kumar
     steps:    
@@ -21,7 +21,7 @@ pipelines:
         type: bash
         setup:
           environmentVariables:
-            readOnly:
+            normal:
               NameF: reddy
               NameL: umar       
           runtime:
