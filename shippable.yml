@@ -22,7 +22,7 @@ pipelines:
         setup:
           environmentVariables:
             normal:
-              Number: 90
+              NameF: reddy
               NameL: umar       
           runtime:
             type: image
@@ -37,7 +37,7 @@ pipelines:
           onExecute:
             - echo "hi"
             - printenv
-            - echo "NameF=$NameF"
+            - echo "NameL=$NameL"
 
       - name: test2
         type: bash
