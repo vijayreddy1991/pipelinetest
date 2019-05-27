@@ -36,16 +36,16 @@ pipelines:
         execution:
           onExecute:
             - echo "hi"
-            - printenv
             - echo "NameL=$NameL"
+            - echo "NameF=$NameF"
 
       - name: test2
         type: bash
         setup:
           environmentVariables:
             normal:
-              Number: 24
-              Sequence: 1         
+              NameF: ranjan
+              NameL: bindu        
           runtime:
             type: image
             image:
@@ -58,16 +58,16 @@ pipelines:
         execution:
           onExecute:
             - echo "test2"
-            - printenv
             - echo "NameF=$NameF"
+            - echo "NameL=$NameL"
 
       - name: test3
         type: bash
         setup:
           environmentVariables:
             normal:
-              Number: 22
-              Sequence: 1        
+              NameF: barath
+              NameL: jatin     
           runtime:
             type: image
             image:
@@ -80,16 +80,16 @@ pipelines:
         execution:
           onExecute:
             - echo "Test3"
-            - printenv
             - echo "NameF=$NameF"
+            - echo "NameL=$NameL"
 
       - name: test4
         type: bash
         setup:
           environmentVariables:
             normal:
-              Number: 29
-              Sequence: 1          
+              NameF: Chaitu
+              NameL: vishnu        
           runtime:
             type: image
             image:
@@ -102,5 +102,5 @@ pipelines:
         execution:
           onExecute:
             - echo "test4"
-            - printenv
             - echo "NameF=$NameF"
+            - echo "NameL=$NameL"
