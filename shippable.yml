@@ -23,7 +23,7 @@ pipelines:
           environmentVariables:
             normal:
               Number: 90
-#               Name: umar       
+              NameL: umar       
           runtime:
             type: image
             image:
