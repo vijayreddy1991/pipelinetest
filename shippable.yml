@@ -21,7 +21,7 @@ pipelines:
         type: bash
         setup:
           environmentVariables:
-            readOnly:
+            normal:
               NameF: reddy
               NameL: umar       
           runtime:
@@ -43,7 +43,7 @@ pipelines:
         type: bash
         setup:
           environmentVariables:
-            readOnly:
+            normal:
               NameF: ranjan
               NameL: bindu        
           runtime:
@@ -65,7 +65,7 @@ pipelines:
         type: bash
         setup:
           environmentVariables:
-            readOnly:
+            normal:
               NameF: barath
               NameL: jatin     
           runtime:
@@ -87,7 +87,7 @@ pipelines:
         type: bash
         setup:
           environmentVariables:
-            readOnly:
+            normal:
               NameF: Chaitu
               NameL: vishnu        
           runtime:
