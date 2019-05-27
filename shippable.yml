@@ -21,7 +21,7 @@ pipelines:
         type: bash
         setup:
           environmentVariables:
-            normal:
+            readOnly:
               NameF: reddy
               NameL: umar       
           runtime:
