@@ -10,7 +10,7 @@ resources:
       sha: master
   
 pipelines:
-  - name: pipeline_pipe
+  - name: pipeline
     setup:
       environmentVariables:
         readOnly:
